@@ -1,13 +1,19 @@
+const path = require('path');
+
 module.exports = {
   mode: "production",
   devtool: "source-map",
   resolve: {
-    extensions: [".ts", ".tsx"]
+    extensions: [".ts", ".tsx", ".js"]
+  },
+  output: {
+    path: path.join(__dirname, '/dist'),
+    filename: 'main.js'
   },
   module: {
     rules: [
       {
-        test: /\.ts(x?)$/,
+       test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
           {

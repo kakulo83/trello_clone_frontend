@@ -1,4 +1,4 @@
-{
+module.exports = {
     "env": {
         "browser": true,
         "es6": true
@@ -8,6 +8,7 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -19,5 +20,8 @@
         "react"
     ],
     "rules": {
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "react/react-in-jsx-scope": 1
     }
-}
+};

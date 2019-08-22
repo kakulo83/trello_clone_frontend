@@ -1,16 +1,52 @@
 {
   "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": false,
+    "alwaysStrict": true,
+    "baseUrl": "./",
+    "diagnostics": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "lib": [
+      "es7",
+      "es2017.object",
+      "es2015.promise",
+      "es2015.collection",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
     "outDir": "./dist/",
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "es6",
-    "target": "es6",
+    "moduleResolution": "node",
+    "noEmitHelpers": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
     "jsx": "react",
-    "baseUrl": "./",
     "paths": {
       "components/*": [
         "src/components/*"
       ]
-    }
-  }
+    },
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "target": "es6",
+    "types": ["node"]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

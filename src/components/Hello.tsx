@@ -1,14 +1,33 @@
 import * as React from "react";
-import PageInterface from "../PageInterface";
-//export interface HelloProps { compiler: string; framework: string; }
+//import PageInterface from "../PageInterface";
 
-export class Hello extends React.Component<PageInterface, {}> {
+interface Props {
+  greeting: string;
+}
+
+interface State {
+  happyLevel: number;
+}
+
+export class Hello extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { happyLevel: 2 };
+  }
+
+  myFunction(): string {
+    let derp = "big pooh";
+    console.log(derp);
+    return "derp"
+  }
+
   render() {
     return (
       <div>
         <h1>Welcome to React with Typescript</h1>
-        <p>The color of the page is {this.props.color}</p>
+      <p>Here is your custom greeting {this.props.greeting}</p>
       </div>
     );
   }
 }
+

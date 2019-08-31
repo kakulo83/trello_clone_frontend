@@ -1,14 +1,21 @@
 const path = require('path');
 
 module.exports = {
+  entry: {
+    app: "./src/index.tsx",
+  },
   mode: "production",
   devtool: "source-map",
+  devServer: {
+    contentBase: "./dist",
+    hot: true,
+  },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'main.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [

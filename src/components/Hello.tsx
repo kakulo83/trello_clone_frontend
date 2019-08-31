@@ -25,7 +25,7 @@ export class Hello extends React.Component<Props, State> {
     return (
       <div>
         <h1>Welcome to React with Typescript</h1>
-      <p>Here is your custom greeting {this.props.greeting}</p>
+        <p>Blitzcrank is your custom greeting {this.props.greeting}</p>
       </div>
     );
   }

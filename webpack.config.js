@@ -4,11 +4,12 @@ module.exports = {
   entry: {
     app: "./src/index.tsx",
   },
-  mode: "production",
+  mode: "development",
   devtool: "source-map",
   devServer: {
     contentBase: "./dist",
     hot: true,
+    liveReload: true,
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]

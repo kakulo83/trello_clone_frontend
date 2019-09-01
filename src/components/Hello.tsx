@@ -1,8 +1,8 @@
 import * as React from "react";
-//import PageInterface from "../PageInterface";
+import Page from "../PageInterface";
 
 interface Props {
-  greeting: string;
+  myProp: Page;
 }
 
 interface State {
@@ -25,7 +25,7 @@ export class Hello extends React.Component<Props, State> {
     return (
       <div>
         <h1>Welcome to React with Typescript</h1>
-        <p>Blitzcrank is your custom greeting {this.props.greeting}</p>
+        <p>Lux is your custom greeting {this.props.myProp.color}</p>
       </div>
     );
   }

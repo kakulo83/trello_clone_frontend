@@ -1,11 +1,15 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Hello } from "./components/Hello";
-import Page from "./PageInterface";
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import AppContainer from "./containers/AppContainer";
+import appReducer from "./reducers/rootReducer";
 
-let myThing: Page = { color: "Blue" };
+const store = createStore(appReducer)
 
 ReactDOM.render(
-  <Hello myProp={myThing} />,
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>,
   document.getElementById("example")
 );

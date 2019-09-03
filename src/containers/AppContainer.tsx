@@ -11,7 +11,7 @@ import { increment } from "../actions/index";
 // <App myProp={myThing} />
 
 const mapDispatchToProps = (dispatch: Dispatch<AppActionTypes>) => ({
-  increment: () => dispatch(increment())
+  clickHandler: () => dispatch(increment())
 })
 
 const mapStateToProps = (state: number) => ({

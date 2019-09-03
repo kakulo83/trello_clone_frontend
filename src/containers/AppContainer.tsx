@@ -1,13 +1,24 @@
-import * as React from "react";
-import { App } from "../components/App";
-import Page from "../PageInterface";
+// import * as React from "react";
+// import { App } from "../components/App";
+import { Dispatch } from "redux";
+import { connect } from "react-redux";
+import Header from "../components/Header";
+import { AppActionTypes } from "../types/index";
+import { increment } from "../actions/index";
 
-let myThing: Page = { color: "Blue" };
+// import Page from "../PageInterface";
+// let myThing: Page = { color: "Blue" };
+// <App myProp={myThing} />
 
-const AppContainer = () => (
-  <div>
-    <App myProp={myThing} />
-  </div>
-)
+const mapDispatchToProps = (dispatch: Dispatch<AppActionTypes>) => ({
+  increment: () => dispatch(increment())
+})
 
-export default AppContainer
+const mapStateToProps = (state: number) => ({
+  count: state
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header)

@@ -1,32 +1,21 @@
 import * as React from "react";
-import Page from "../PageInterface";
+import Header from "./Header";
 
-interface Props {
-  myProp: Page;
+type Props = {
+  count: number;
+  clickHandler: () => void
 }
 
-interface State {
-  happyLevel: number;
-}
+const App: React.FC<Props> = props => (
+  <div>
+    <Header/>
+    <p>{props.count}</p>
+    <input
+      onClick={() => props.clickHandler()}
+      type="button"
+      value="Increment"
+    />
+  </div>
+)
 
-export class App extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { happyLevel: 2 };
-  }
-
-  increment = ()=> {
-
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Welcome to React with Typescript</h1>
-        <p>Lux is your custom greeting {this.props.myProp.color}</p>
-        <button onClick={this.increment}>Increment</button>
-      </div>
-    );
-  }
-}
-
+export default App

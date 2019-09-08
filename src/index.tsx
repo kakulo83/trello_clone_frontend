@@ -14,5 +14,5 @@ ReactDOM.render(
   <Provider store={store}>
     <AppContainer />
   </Provider>,
-  document.getElementById("example")
+  document.getElementById("app-container")
 );

@@ -1,9 +1,9 @@
 import {
   INCREMENT,
   AppActionTypes,
-} from "../types/index";
+} from "../types/index"
 
-const AppReducer = (state=0, action: AppActionTypes) => {
+const RootReducer = (state=0, action: AppActionTypes) => {
   switch(action.type) {
     case INCREMENT:
       return state + 1
@@ -12,4 +12,4 @@ const AppReducer = (state=0, action: AppActionTypes) => {
   }
 }
 
-export default AppReducer
+export default RootReducer

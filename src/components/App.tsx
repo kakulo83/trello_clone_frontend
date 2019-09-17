@@ -16,7 +16,8 @@ const ContentContainer = styled.div`
 
 type Props = {
   count: number;
-  clickHandler: () => void
+  clickHandler: () => void;
+  loggedIn: boolean;
 }
 
 const App: React.FC<Props> = props => (

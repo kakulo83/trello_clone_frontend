@@ -9,7 +9,8 @@ const mapDispatchToProps = (dispatch: Dispatch<AppActionTypes>) => ({
 })
 
 const mapStateToProps = (state: number) => ({
-  count: state
+  count: state,
+  loggedIn: false,
 })
 
 export default connect(

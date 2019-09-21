@@ -1,7 +1,7 @@
-import { INCREMENT, AppActionTypes } from "../types/index"
+import { LOGIN, AppActionTypes } from "../types/index"
 
-export function increment(): AppActionTypes {
+export function login(): AppActionTypes {
   return {
-    type: INCREMENT
+    type: LOGIN
   }
 }

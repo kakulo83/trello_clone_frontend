@@ -2,10 +2,10 @@ import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import App from "../components/App";
 import { AppActionTypes } from "../types/index";
-import { increment } from "../actions/index";
+import { login } from "../actions/index";
 
 const mapDispatchToProps = (dispatch: Dispatch<AppActionTypes>) => ({
-  clickHandler: () => dispatch(increment())
+  clickHandler: () => dispatch(login())
 })
 
 const mapStateToProps = (state: number) => ({

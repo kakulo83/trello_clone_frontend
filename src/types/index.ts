@@ -1,7 +1,7 @@
-export const INCREMENT = 'INCREMENT'
+export const LOGIN = 'LOGIN'
 
-interface Increment {
-  type: typeof INCREMENT
+interface Login {
+  type: typeof LOGIN
 }
 
-export type AppActionTypes = Increment
+export type AppActionTypes = Login

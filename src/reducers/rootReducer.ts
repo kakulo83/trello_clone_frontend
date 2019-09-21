@@ -1,5 +1,5 @@
 import {
-  INCREMENT,
+  LOGIN,
   AppActionTypes,
 } from "../types/index"
 
@@ -7,7 +7,7 @@ import {
 
 const RootReducer = (state=0, action: AppActionTypes) => {
   switch(action.type) {
-    case INCREMENT:
+    case LOGIN:
       return state + 1
     default:
       return state

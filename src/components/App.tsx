@@ -15,16 +15,15 @@ const ContentContainer = styled.div`
 `;
 
 type Props = {
-  count: number;
-  clickHandler: () => void;
   loggedIn: boolean;
+  clickHandler: () => void;
 }
 
 const App: React.FC<Props> = props => (
   <AppContainer>
     <Header/>
     <ContentContainer>
-      <p>{props.count}</p>
+      <p>{props.loggedIn}</p>
       <input
         onClick={() => props.clickHandler()}
         type="button"

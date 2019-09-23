@@ -1,17 +1,10 @@
-import {
-  LOGIN,
-  AppActionTypes,
-} from "../types/index"
+import { combineReducers } from 'redux';
+import { systemReducer } from './system/reducer';
 
-// IMPORT ALL REDUCERS
+const rootReducer = combineReducers({
+  system: systemReducer
+})
 
-const RootReducer = (state=0, action: AppActionTypes) => {
-  switch(action.type) {
-    case LOGIN:
-      return state + 1
-    default:
-      return state
-  }
-}
+export type AppState = ReturnType<typeof rootReducer>
 
-export default RootReducer
+export default rootReducer

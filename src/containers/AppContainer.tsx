@@ -1,16 +1,15 @@
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import App from "../components/App";
-import { AppActionTypes } from "../types/index";
-import { login } from "../actions/index";
+import { SystemActionTypes, SystemState } from "../types/system/types";
+import { login } from "../actions/system/actions";
 
-const mapDispatchToProps = (dispatch: Dispatch<AppActionTypes>) => ({
-  clickHandler: () => dispatch(login())
+const mapDispatchToProps = (dispatch: Dispatch<SystemActionTypes>) => ({
+  clickHandler: () => dispatch(login({ email: "admin1@test.net", password: "password" }))
 })
 
-const mapStateToProps = (state: number) => ({
-  count: state,
-  loggedIn: false,
+const mapStateToProps = (state: SystemState) => ({
+  loggedIn: state.loggedIn,
 })
 
 export default connect(

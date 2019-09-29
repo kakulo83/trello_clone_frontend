@@ -1,4 +1,4 @@
-import { takeEvery, put, call } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import {
   APIService,
 } from '../services/APIService';
@@ -33,22 +33,13 @@ function* startLogin(action: LoginAction) {
       }
     }
 
-    const response = yield call(fetch, "http://localhost:3000/login", api.request(body));
+    const json = yield fetch("http://localhost:3000/login",
+      api.request(body)).then(response => response.json())
 
-
-    // TODO response isn't what you think it is, there's probably some function
-    // that you have to run to get to the actual response data payload
-    //
-    // i.e   await response.json()
-    //const data = response.json().then(payload => {
-    //  debugger
-    //  // token is available here!!!
-    //});
-
-
-    yield put(actions.loginSuccessful(response.token))
+    yield put(actions.loginSuccessful(json.token))
 
   } catch (error) {
+    console.log(error)
     console.log("Fail");
   }
 }

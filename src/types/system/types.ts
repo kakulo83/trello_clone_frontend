@@ -10,10 +10,6 @@ export interface Credentials {
   password: string;
 }
 
-export interface ApiToken {
-  apiToken: string;
-}
-
 export const LOGIN = 'LOGIN';
 export const LOGIN_SUCCESSFUL = 'LOGIN_SUCCESSFUL';
 
@@ -24,7 +20,7 @@ export interface LoginAction {
 
 export interface LoginSuccessfulAction {
   type: typeof LOGIN_SUCCESSFUL
-  payload: ApiToken
+  payload: string;
 }
 
 export type SystemActionTypes = LoginAction | LoginSuccessfulAction

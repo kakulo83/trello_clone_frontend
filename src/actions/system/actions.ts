@@ -2,7 +2,6 @@ import {
   LOGIN,
   LOGIN_SUCCESSFUL,
   Credentials,
-  ApiToken,
   SystemActionTypes
 } from '../../types/system/types'
 
@@ -13,7 +12,7 @@ export function login(credentials: Credentials): SystemActionTypes {
   }
 }
 
-export function loginSuccessful(token: ApiToken): SystemActionTypes {
+export function loginSuccessful(token: string): SystemActionTypes {
   return {
     type: LOGIN_SUCCESSFUL,
     payload: token,

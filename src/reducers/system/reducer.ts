@@ -28,7 +28,7 @@ export function systemReducer(
       return {
         ...state,
         isAuthenticating: false,
-        apiToken: action.payload.apiToken,
+        apiToken: action.payload,
       }
     }
     default:
